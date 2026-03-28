@@ -4,7 +4,8 @@ from scipy import ndimage
 from skimage.measure import label
 import os
 
-folder = "out"
+folder = "out"  # name of your folder in project
+
 images = []
 for i in range(100):
     img = np.load(os.path.join(folder, f"h_{i}.npy"))
@@ -14,6 +15,7 @@ def get_centroids(img):
     labeled = label(img)
     num = labeled.max()
     centroids = ndimage.center_of_mass(img, labeled, range(1, num + 1))
+
     return centroids
 
 trajectories = []
