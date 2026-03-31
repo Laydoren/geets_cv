@@ -14,7 +14,7 @@ labled_processed = label(processed)
 print(f"All objects: {labled_original.max()}")
 print(f"Rectangles: {labled_processed.max()}")
 
-print(f"Stars: {labled_original.max() - labled_processed.max()}")
+print(f"\nStars: {labled_original.max() - labled_processed.max()}")
 
 stars = np.bitwise_xor(image, processed) # Stars demostration without rectangles
 
